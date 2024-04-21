@@ -68,7 +68,7 @@ typedef struct
 } bsecOutputs;
 
 class Bsec2;
-typedef void (*bsecCallback)(const bme68xData data, const bsecOutputs outputs, const Bsec2 bsec);
+typedef void (*bsecCallback)(const bme68xData data, const bsecOutputs outputs, Bsec2 *bsec);
 
 /* BSEC2 class definition */
 class Bsec2

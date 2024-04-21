@@ -356,7 +356,7 @@ bool Bsec2::processData(int64_t currTimeNs, const bme68xData &data)
             return false;
 
         if(newDataCallback)
-            newDataCallback(data, outputs, *this);
+            newDataCallback(data, outputs, this);
     }
     return true;
 }

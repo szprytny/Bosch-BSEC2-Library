@@ -79,7 +79,7 @@ void updateBsecState(Bsec2 bsec);
  * @param[in] outputs   : Processed BSEC BSEC output data
  * @param[in] bsec      : Instance of BSEC2 calling the callback
  */
-void newDataCallback(const bme68xData data, const bsecOutputs outputs, Bsec2 bsec);
+void newDataCallback(const bme68xData data, const bsecOutputs outputs, Bsec2 *bsec);
 
 /**
  * @brief : This function retrieves the existing state
@@ -237,7 +237,7 @@ void updateBsecState(Bsec2 bsec)
         checkBsecStatus(bsec);
 }
 
-void newDataCallback(const bme68xData data, const bsecOutputs outputs, Bsec2 bsec)
+void newDataCallback(const bme68xData data, const bsecOutputs outputs, Bsec2 *bsec)
 {
     if (!outputs.nOutputs)
         return;

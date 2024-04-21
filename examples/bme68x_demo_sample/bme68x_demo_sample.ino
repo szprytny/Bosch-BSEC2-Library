@@ -450,7 +450,7 @@ demo_ret_code log_sensor_data(uint8_t sens_num)
 	return ret;
 }
 
-void bsecCallBack(const bme68x_data input, const bsecOutputs outputs, Bsec2 bsec)
+void bsecCallBack(const bme68x_data input, const bsecOutputs outputs, Bsec2 *bsec)
 {
 	/* Sending bme raw data via ble */
 	ble_notify_bme68x_data(input, sensor_num);
